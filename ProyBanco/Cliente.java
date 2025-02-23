@@ -18,6 +18,6 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return nombre + (esPrioritario ? " (Propietario)" : "");
+        return nombre + (esPrioritario ? " (Cliente prioritario)" : " (Cliente regular)");
     }
 }
