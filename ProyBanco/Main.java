@@ -3,7 +3,9 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
+    // Cola de clientes en espera
     private static Queue<Cliente> colaClientes = new LinkedList<>();
+     // Scanner para leer la entrada del usuario
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -36,6 +38,11 @@ public class Main {
         } while (opcion != 4);
     }
 
+
+     /**
+     * Método para agregar un cliente a la cola de espera.
+     * Se solicita su nombre y si es prioritario (SI para sí, cualquier otra cosa para no).
+     */
     private static void agregarCliente() {
         System.out.print("Ingrese el nombre del cliente: ");
         String nombre = scanner.nextLine();
@@ -46,6 +53,7 @@ public class Main {
         System.out.println("Cliente agregado a la cola."); 
     }
 
+    // Método para atender al siguiente
     private static void atenderCliente() {
         if (colaClientes.isEmpty()) {
             System.out.println("No hay clientes en espera.");
@@ -57,6 +65,8 @@ public class Main {
         }
     }
 
+
+    //Método para mostrar la lista de clientes en espera.
     private static void mostrarCola() {
         if (colaClientes.isEmpty()) {
             System.out.println("No hay clientes en espera.");
