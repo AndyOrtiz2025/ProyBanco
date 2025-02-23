@@ -8,6 +8,8 @@ public class Cliente {
         this.esPrioritario = esPrioritario;
     }
 
+
+        // Método para obtener el nombre del cliente
     public String getNombre() {
         return nombre;
     }
