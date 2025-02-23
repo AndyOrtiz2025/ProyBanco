@@ -41,7 +41,7 @@ public class Main {
         String nombre = scanner.nextLine();
         System.out.print("¿Es prioritario?: ");
         String esPrioritarioStr = scanner.nextLine().toLowerCase();
-        boolean esPrioritario = esPrioritarioStr.equals("s");
+        boolean esPrioritario = esPrioritarioStr.equals("SI");
         colaClientes.add(new Cliente(nombre, esPrioritario));
         System.out.println("Cliente agregado a la cola."); 
     }
